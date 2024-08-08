@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: p22-mackinac-pro, serif;
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.scrolling-text {
+  display: block;
+  width: 100%;
+  /* height: 7em; Adjust height to fit two lines of text */
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-text div {
+  /* position: absolute; */
+  width: 100%;
+  height: auto;
+  margin: 0;
+  line-height: 1.5em; /* Adjust line-height to control the spacing between lines */
+  /* animation: scroll 12s linear infinite; */
+}
+
+.line {
+  height: 1.5em; /* Match the line-height for consistency */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12em); /* Scrolls up by eight lines */
+  }
+}
+
+/* @keyframes scroll {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-3em); 
+  }
+  50%,
+  70% {
+    transform: translateY(-6em); 
+  }
+  75%,
+  95% {
+    transform: translateY(-9em); 
+  }
+  100% {
+    transform: translateY(-12em); 
+  }
+} */
+
+.hover\:zoom-in:hover {
+  animation: zoom-in 0.3s ease-in-out forwards;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .d_mt_4 {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 576px) {
+  .d_mt_4 {
+    margin-top: 0 !important;
+  }
+  .product-wrap main .wrap {
+    margin-left: unset !important;
+    width: 100% !important;
+  }
+}
+
+.active {
+  color: black !important;
+  opacity: 1 !important;
+}
+
+.product-wrap main .wrap {
+  width: 70%;
+  margin: 0 auto;
+  margin-left: 15rem;
+}
+.nav-link {
+  color: #464646;
+  opacity: 0.3;
+}
+#research .wrap {
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+  border-radius: 14px;
+}

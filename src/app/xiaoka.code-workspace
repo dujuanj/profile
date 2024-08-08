@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "../../../../../code/xiaoka",
+    },
+    {
+      "path": "../../../../../code/yijia/my-app",
+    },
+    {
+      "path": "../../../../../Desktop/1",
+    },
+    {
+      "path": "../../..",
+    },
+    {
+      "path": "../../../../s1/shop",
+    },
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "1",
+  },
+}
